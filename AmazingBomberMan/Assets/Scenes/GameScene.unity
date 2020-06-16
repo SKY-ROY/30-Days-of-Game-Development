@@ -121,12 +121,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!95 &187792155 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 7519216964569223282, guid: d45adc32b57f49540af6ec35a15871bf,
-    type: 3}
-  m_PrefabInstance: {fileID: 1023957286}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &401465651
 GameObject:
   m_ObjectHideFlags: 0
@@ -442,6 +436,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 822609078}
   m_CullTransparentMesh: 0
+--- !u!95 &958888819 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 12637273570211974, guid: d45adc32b57f49540af6ec35a15871bf,
+    type: 3}
+  m_PrefabInstance: {fileID: 1023957286}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1023957286
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -474,10 +474,15 @@ PrefabInstance:
       propertyPath: m_ReferenceResolution.y
       value: 800
       objectReference: {fileID: 0}
-    - target: {fileID: 5648284314526156931, guid: d45adc32b57f49540af6ec35a15871bf,
+    - target: {fileID: 5291192219676881989, guid: d45adc32b57f49540af6ec35a15871bf,
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5648284314526156931, guid: d45adc32b57f49540af6ec35a15871bf,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6491328563065216608, guid: d45adc32b57f49540af6ec35a15871bf,
         type: 3}
@@ -558,7 +563,7 @@ PrefabInstance:
         type: 3}
       propertyPath: transition
       value: 
-      objectReference: {fileID: 187792155}
+      objectReference: {fileID: 958888819}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d45adc32b57f49540af6ec35a15871bf, type: 3}
 --- !u!1 &1035110040
