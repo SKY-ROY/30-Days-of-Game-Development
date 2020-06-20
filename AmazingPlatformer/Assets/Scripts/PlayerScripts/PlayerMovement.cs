@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
 
     public Transform groundCheckPosition;
     public LayerMask groundLayer;
-
+    
     private Rigidbody2D myBody;
     private Animator anim;
 
@@ -37,6 +37,7 @@ public class PlayerMovement : MonoBehaviour
         */
         CheckIfGrounded();
         PlayerJump();
+        
     }
 
     private void FixedUpdate()
