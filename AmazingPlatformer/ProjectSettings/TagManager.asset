@@ -5,10 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
-  - Forbidden
   - Beetle
   - Bullet
   - Snail
+  - Bird
+  - Spider
   layers:
   - Default
   - TransparentFX

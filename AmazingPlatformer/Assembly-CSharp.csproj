@@ -63,7 +63,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\EnemyScripts\BirdScript.cs" />
+    <Compile Include="Assets\Scripts\EnemyScripts\EggScript.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\SnailScript.cs" />
+    <Compile Include="Assets\Scripts\EnemyScripts\SpiderScript.cs" />
     <Compile Include="Assets\Scripts\HelperScripts\MyTags.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\AlteredMovement.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\FireBullet.cs" />

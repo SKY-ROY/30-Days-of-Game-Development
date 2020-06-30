@@ -20,7 +20,7 @@ public class FireBullet : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(DisableBullet(5f));
+        StartCoroutine(DisableBullet(3f));
     }
 
     // Update is called once per frame
@@ -47,7 +47,9 @@ public class FireBullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D target)
     {
-        if(target.gameObject.tag == MyTags.BEETLE_TAG || target.gameObject.tag == MyTags.SNAIL_TAG)
+        if(target.gameObject.tag == MyTags.BEETLE_TAG || 
+            target.gameObject.tag == MyTags.SNAIL_TAG || 
+            target.gameObject.tag == MyTags.SPIDER_TAG)
         {
             anim.Play("Explode");
             canMove = false;
