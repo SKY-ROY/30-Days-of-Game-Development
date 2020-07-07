@@ -10,6 +10,8 @@ TagManager:
   - Snail
   - Bird
   - Spider
+  - Water
+  - Coin
   layers:
   - Default
   - TransparentFX
@@ -46,4 +48,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: BackGround
+    uniqueID: 219922419
+    locked: 0
+  - name: ForeGround
+    uniqueID: 92178105
     locked: 0
