@@ -1,0 +1,16 @@
+{
+"companyName": "SKY5698",
+"productName": "AmazingPlatformer",
+"productVersion": "0.1",
+"dataUrl": "AmazingPlatformer_2020.07.09.21.56.data.unityweb",
+"wasmCodeUrl": "AmazingPlatformer_2020.07.09.21.56.wasm.code.unityweb",
+"wasmFrameworkUrl": "AmazingPlatformer_2020.07.09.21.56.wasm.framework.unityweb",
+"graphicsAPI": ["WebGL 2.0","WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20",
+"cacheControl": {"default": "must-revalidate"},
+"developmentBuild": false,
+"multithreading": false,
+"unityVersion": "2019.4.0f1"
+}

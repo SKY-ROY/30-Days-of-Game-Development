@@ -4,6 +4,7 @@ using UnityEngine;
 public class FrogScript : MonoBehaviour
 {
     private Animator anim;
+    private GameObject player;
 
     private bool animation_Started;
     private bool animation_Finished;
@@ -13,6 +14,8 @@ public class FrogScript : MonoBehaviour
 
     private string coroutine_Name = "FrogJump";
 
+    public LayerMask playerLayer;
+
     private void Awake()
     {
         anim = GetComponent<Animator>();
@@ -21,8 +24,16 @@ public class FrogScript : MonoBehaviour
     private void Start()
     {
         StartCoroutine(coroutine_Name);
+        player = GameObject.FindGameObjectWithTag(MyTags.PLAYER_TAG);
     }
-     
+
+    private void Update()
+    {
+        if(Physics2D.OverlapCircle(transform.position, 0.5f, playerLayer))
+        {
+            player.GetComponent<PlayerDamage>().DealDamage();
+        }
+    }
     private void LateUpdate()
     {
         //Debug.Log("LateUpdate");
@@ -80,6 +91,14 @@ public class FrogScript : MonoBehaviour
             transform.localScale = tempScale;
 
             jumpLeft = !jumpLeft;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D target)
+    {
+        if (target.tag == MyTags.BULLET_TAG)
+        {
+            gameObject.SetActive(false);
         }
     }
 }

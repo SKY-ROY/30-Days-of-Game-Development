@@ -12,6 +12,7 @@ TagManager:
   - Spider
   - Water
   - Coin
+  - Boss
   layers:
   - Default
   - TransparentFX
@@ -54,4 +55,7 @@ TagManager:
     locked: 0
   - name: ForeGround
     uniqueID: 92178105
+    locked: 0
+  - name: UI
+    uniqueID: 1591637733
     locked: 0
