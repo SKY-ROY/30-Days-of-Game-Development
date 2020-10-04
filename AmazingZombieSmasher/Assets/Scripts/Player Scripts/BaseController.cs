@@ -19,17 +19,17 @@ public class BaseController : MonoBehaviour
         soundManager = GetComponent<AudioSource>();
         speed = new Vector3(0f, 0f, zSpeed);
     }
-
+    //sideways movement towards left
     protected void MoveLeft()
     {
         speed = new Vector3(-xSpeed / 2f, 0f, speed.z);
     }
-
+    //sideways movement towards right
     protected void MoveRight()
     {
         speed = new Vector3(xSpeed / 2f, 0f, speed.z);
     }
-
+    //forward movement
     protected void MoveStraight()
     {
         speed = new Vector3(0f, 0f, speed.z);
