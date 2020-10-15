@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 1226799826505673459}
   - component: {fileID: 2693348172503588354}
   - component: {fileID: 450855082150301999}
+  - component: {fileID: -7699318695353843633}
   m_Layer: 0
-  m_Name: ObstacleFuelTruck1
-  m_TagString: Untagged
+  m_Name: ObstacleTruck1
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -192,6 +193,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-7699318695353843633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1226799826503676979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5190ad5655f8ac84883f8faab7d38345, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionPrefab: {fileID: 1242859992640132, guid: a30f4231b59ac4cac82b2b2931f7a678,
+    type: 3}
+  damage: 20
 --- !u!1 &1226799826503676981
 GameObject:
   m_ObjectHideFlags: 0
