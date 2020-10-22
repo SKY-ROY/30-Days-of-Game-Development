@@ -4,21 +4,40 @@ using UnityEngine;
 
 public class BaseController : MonoBehaviour
 {
-    private bool isSlow;
-    private AudioSource soundManager;
-
+    [Header("Movement Parameters")]
     public Vector3 speed;
-    public float xSpeed = 8f, zSpeed = 15f, accelerated = 15f, decelerated = 10f;
-    public float lowSoundPitch, normalSoundPitch, highSoundPitch;
-    public AudioClip engineOnSound, engineOffSound;
+    public float xSpeed = 7.5f, zSpeed = 15f, accelerated = 25f, decelerated = 5f;
+    public float incrementPeriod = 30f;
+
+    [Header("Movement based Sound Parameters")]
+    public float lowSoundPitch;
+    public float normalSoundPitch; 
+    public float highSoundPitch;
+    public AudioClip engineOnSound; 
+    public AudioClip engineOffSound;
+
+    [Header("On-screen buttons")]
+    public GameObject buttonShoot;
+    public GameObject buttonDown;
+    public GameObject buttonRight;
+    public GameObject buttonLeft;
+    public GameObject buttonUp;
+
+    [Header("Monitoring through editor")]
+    public float timePassed;
 
     protected float rotationSpeed = 10f, maxAngle = 10f;
+
+    private AudioSource soundManager;
+    private bool isSlow;
 
     private void Awake()
     {
         soundManager = GetComponent<AudioSource>();
         speed = new Vector3(0f, 0f, zSpeed);
+        timePassed = 0f;
     }
+
     //sideways movement towards left
     protected void MoveLeft()
     {
@@ -60,6 +79,7 @@ public class BaseController : MonoBehaviour
             soundManager.volume = 0.5f;
             soundManager.Play();
         }
+
         speed = new Vector3(speed.x, 0f, decelerated);
     }
 

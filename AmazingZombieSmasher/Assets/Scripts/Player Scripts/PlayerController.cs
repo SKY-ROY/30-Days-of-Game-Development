@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
+using UnityEngine.EventSystems;
 
 public class PlayerController : BaseController
 {
@@ -24,14 +26,44 @@ public class PlayerController : BaseController
         //shootSliderAnim = GameObject.Find("Firepower Bar").GetComponent<Animator>();
         shootSliderAnim = GameObject.Find("UI Holder").GetComponentInChildren<Animator>(true);
 
-        GameObject.Find("Shoot Button").GetComponent<Button>().onClick.AddListener(ShootingControl);
+        buttonShoot = GameObject.Find("Shoot Button");
+        buttonUp = GameObject.Find("Up Button");
+        buttonDown = GameObject.Find("Down Button");
+        buttonRight = GameObject.Find("Right Button");
+        buttonLeft = GameObject.Find("Left Button");
+
+        //Shoot Button
+        buttonShoot.GetComponent<HoldToClick>().onLongClickUp.AddListener(ShootingControl);
+
+        //On screen Up button
+        buttonUp.gameObject.GetComponent<HoldToClick>().onLongClickDown.AddListener(MoveFast);
+        buttonUp.gameObject.GetComponent<HoldToClick>().onLongClickUp.AddListener(MoveNormal);
+
+        //On screen Down button
+        buttonDown.gameObject.GetComponent<HoldToClick>().onLongClickDown.AddListener(MoveSlow);
+        buttonDown.gameObject.GetComponent<HoldToClick>().onLongClickUp.AddListener(MoveNormal);
+
+        //On screen Right button
+        buttonRight.gameObject.GetComponent<HoldToClick>().onLongClickDown.AddListener(MoveRight);
+        buttonRight.gameObject.GetComponent<HoldToClick>().onLongClickUp.AddListener(MoveStraight);
+
+        //On screen Left button
+        buttonLeft.gameObject.GetComponent<HoldToClick>().onLongClickDown.AddListener(MoveLeft);
+        buttonLeft.gameObject.GetComponent<HoldToClick>().onLongClickUp.AddListener(MoveStraight);
 
         canShoot = true;
+
+        StartCoroutine(IncreaseSpeed());
     }
 
     void Update()
     {
         ControlMovementWithKeyboard();
+
+        ShootThroughKeyboard();
+   
+        timePassed += Time.deltaTime;
+        
     }
 
     private void FixedUpdate()
@@ -47,11 +79,12 @@ public class PlayerController : BaseController
 
     void ControlMovementWithKeyboard()
     {
+        //Rotating left
         if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
         {
             MoveLeft();
         }
-        
+        //rotating right
         if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
         {
             MoveRight();
@@ -83,9 +116,18 @@ public class PlayerController : BaseController
             MoveNormal();
         }
         //resetting back to normal speed when we let go of Speed Down key
-        if (Input.GetKeyUp(KeyCode.DownArrow) || Input.GetKeyUp(KeyCode.S))
+        if(Input.GetKeyUp(KeyCode.DownArrow) || Input.GetKeyUp(KeyCode.S))
         {
             MoveNormal();
+        }
+    }
+
+    void ShootThroughKeyboard()
+    {
+        //Shooting through space bar
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            ShootingControl();
         }
     }
 
@@ -119,5 +161,18 @@ public class PlayerController : BaseController
                 shootSliderAnim.Play("Fill");
             }
         }
+    }
+
+    IEnumerator IncreaseSpeed()
+    {
+        yield return new WaitForSeconds(incrementPeriod);
+        
+        zSpeed += 5;
+        accelerated += 5;
+        decelerated += 5;
+        MoveNormal();
+
+        StartCoroutine(IncreaseSpeed());
+
     }
 }

@@ -172,6 +172,7 @@ GameObject:
   - component: {fileID: 5486280886761735102}
   - component: {fileID: 5557266346432011996}
   - component: {fileID: -7610214434143836579}
+  - component: {fileID: 9193822013127045681}
   m_Layer: 0
   m_Name: ObstacleTruck2
   m_TagString: Obstacle
@@ -366,3 +367,16 @@ MonoBehaviour:
   explosionPrefab: {fileID: 1242859992640132, guid: a30f4231b59ac4cac82b2b2931f7a678,
     type: 3}
   damage: 20
+--- !u!114 &9193822013127045681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6395341879854624076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b2da75c3cf887d44a2de086812bc49f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 5

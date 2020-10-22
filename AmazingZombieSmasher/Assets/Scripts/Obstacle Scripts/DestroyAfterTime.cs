@@ -5,11 +5,22 @@ using UnityEngine.UI;
 
 public class DestroyAfterTime : MonoBehaviour
 {
-    public float timer = 3f;
+    public float timer = 2.5f;
+
+    private GameObject player;
 
     private void Start()
     {
-        Invoke("DeactivateGameObject", timer);
+        player = GameObject.FindGameObjectWithTag(MyTags.PLAYER_TAG);
+        
+    }
+
+    private void Update()
+    {
+        if(transform.position.z < player.transform.position.z)
+        {
+            Invoke("DeactivateGameObject", timer);
+        }
     }
 
     void DeactivateGameObject()

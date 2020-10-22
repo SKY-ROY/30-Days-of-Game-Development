@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7028934431253571181}
   - component: {fileID: 6047415019355393260}
   - component: {fileID: -3773179221056764596}
+  - component: {fileID: -3899796356032927084}
   m_Layer: 0
   m_Name: FuelTankLarge
   m_TagString: Obstacle
@@ -206,3 +207,16 @@ MonoBehaviour:
   explosionPrefab: {fileID: 1242859992640132, guid: a30f4231b59ac4cac82b2b2931f7a678,
     type: 3}
   damage: 20
+--- !u!114 &-3899796356032927084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9019874994598204449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b2da75c3cf887d44a2de086812bc49f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 5

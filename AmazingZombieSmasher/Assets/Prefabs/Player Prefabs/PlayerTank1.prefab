@@ -208,11 +208,18 @@ MonoBehaviour:
   zSpeed: 15
   accelerated: 25
   decelerated: 5
+  incrementPeriod: 30
   lowSoundPitch: 0
   normalSoundPitch: 0
   highSoundPitch: 0
   engineOnSound: {fileID: 0}
   engineOffSound: {fileID: 0}
+  buttonShoot: {fileID: 0}
+  buttonDown: {fileID: 0}
+  buttonRight: {fileID: 0}
+  buttonLeft: {fileID: 0}
+  buttonUp: {fileID: 0}
+  timePassed: 0
   bullet_StartPoint: {fileID: 358587008}
   bullet_Prefab: {fileID: 2715404274924709838, guid: 727dd5a9ef410cb4eb19dec3b6c43e42,
     type: 3}
@@ -231,6 +238,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84993323391356245a9f43896be76f10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthValue: 100
 --- !u!1001 &1954905894444547380
 PrefabInstance:
   m_ObjectHideFlags: 0

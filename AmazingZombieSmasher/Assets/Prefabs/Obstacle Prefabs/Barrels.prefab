@@ -170,6 +170,7 @@ GameObject:
   - component: {fileID: 487984}
   - component: {fileID: 6587988}
   - component: {fileID: -6687637330569291831}
+  - component: {fileID: -5276909809862272535}
   m_Layer: 0
   m_Name: Barrels
   m_TagString: Obstacle
@@ -222,6 +223,19 @@ MonoBehaviour:
   explosionPrefab: {fileID: 1242859992640132, guid: a30f4231b59ac4cac82b2b2931f7a678,
     type: 3}
   damage: 10
+--- !u!114 &-5276909809862272535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 187984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b2da75c3cf887d44a2de086812bc49f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 5
 --- !u!1 &187986
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6735979411782857773}
   - component: {fileID: 6735979411782857746}
   - component: {fileID: 1652423512389701456}
+  - component: {fileID: 3204794860235870409}
   m_Layer: 0
   m_Name: Zombie5
   m_TagString: Untagged
@@ -77,7 +78,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bloodFXPrefab: {fileID: 1690365919121730, guid: 01905950d6bb84877a984f64b83d6c2d,
     type: 3}
-  speed: 1
+--- !u!114 &3204794860235870409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6735979411782857747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b2da75c3cf887d44a2de086812bc49f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 2.5
 --- !u!1001 &6735979412562543562
 PrefabInstance:
   m_ObjectHideFlags: 0

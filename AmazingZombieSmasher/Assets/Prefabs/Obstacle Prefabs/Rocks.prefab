@@ -91,6 +91,7 @@ GameObject:
   - component: {fileID: 6555788}
   - component: {fileID: 11428638}
   - component: {fileID: 8297380}
+  - component: {fileID: 5024318796860961329}
   m_Layer: 8
   m_Name: Rocks
   m_TagString: Obstacle
@@ -239,6 +240,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &5024318796860961329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 155790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b2da75c3cf887d44a2de086812bc49f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 5
 --- !u!1 &155792
 GameObject:
   m_ObjectHideFlags: 0

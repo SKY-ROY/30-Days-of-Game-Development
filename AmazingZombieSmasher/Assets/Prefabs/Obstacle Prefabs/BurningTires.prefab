@@ -90,6 +90,7 @@ GameObject:
   - component: {fileID: 454914}
   - component: {fileID: 6595862}
   - component: {fileID: 3657684578220203864}
+  - component: {fileID: 9028267870909595028}
   m_Layer: 0
   m_Name: BurningTires
   m_TagString: Obstacle
@@ -143,6 +144,19 @@ MonoBehaviour:
   explosionPrefab: {fileID: 1242859992640132, guid: a30f4231b59ac4cac82b2b2931f7a678,
     type: 3}
   damage: 5
+--- !u!114 &9028267870909595028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 154914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b2da75c3cf887d44a2de086812bc49f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 5
 --- !u!1 &154916
 GameObject:
   m_ObjectHideFlags: 0
