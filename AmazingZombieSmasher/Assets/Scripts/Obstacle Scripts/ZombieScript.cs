@@ -12,7 +12,6 @@ public class ZombieScript : MonoBehaviour
 
     private bool isAlive;
 
-    // Start is called before the first frame update
     void Start()
     {
         myBody = GetComponent<Rigidbody>();
@@ -22,7 +21,6 @@ public class ZombieScript : MonoBehaviour
         isAlive = true;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if(isAlive)
@@ -62,7 +60,7 @@ public class ZombieScript : MonoBehaviour
 
             Invoke("DeactivateGameObject", 3f);
 
-            //Increase score
+            GameplayController.instance.IncreaseScore();
 
             Die();
         }

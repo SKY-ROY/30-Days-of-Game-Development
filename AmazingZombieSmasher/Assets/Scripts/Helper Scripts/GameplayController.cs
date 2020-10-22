@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameplayController : MonoBehaviour
 {
@@ -15,6 +17,18 @@ public class GameplayController : MonoBehaviour
     private float halfGroundSize;
     private BaseController playerController;
 
+    private Text score_Text;
+    private int zombie_KillCount;
+
+    [SerializeField]
+    private GameObject pause_Panel;
+
+    [SerializeField]
+    private GameObject gameOver_Panel;
+
+    [SerializeField]
+    private Text finalScore_Text;
+
     private void Awake()
     {
         MakeInstance();
@@ -28,6 +42,8 @@ public class GameplayController : MonoBehaviour
         playerController = GameObject.FindGameObjectWithTag(MyTags.PLAYER_TAG).GetComponent<BaseController>();
 
         StartCoroutine("GenerateObstacles");
+
+        score_Text = GameObject.Find("Score Bar").GetComponentInChildren<Text>();
     }
 
     void MakeInstance()
@@ -117,5 +133,42 @@ public class GameplayController : MonoBehaviour
             
             Instantiate(zombiePrefabs[Random.Range(0, zombiePrefabs.Length)], pos + shift * i, Quaternion.identity);
         }
+    }
+
+    public void IncreaseScore()
+    {
+        zombie_KillCount++;
+        score_Text.text = zombie_KillCount.ToString();
+    }
+
+    public void PauseGame()
+    {
+        pause_Panel.SetActive(true);
+        Time.timeScale = 0f;
+    }    
+
+    public void ResumeGame()
+    {
+        pause_Panel.SetActive(false);
+        Time.timeScale = 1f;
+    }
+
+    public void ExitGame()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    public void GameOver()
+    {
+        Time.timeScale = 0f;
+        gameOver_Panel.SetActive(true);
+        finalScore_Text.text = "Kiled: " + zombie_KillCount.ToString();
+    }
+
+    public void Restart()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("Gameplay");//respective name for each scene
     }
 }
