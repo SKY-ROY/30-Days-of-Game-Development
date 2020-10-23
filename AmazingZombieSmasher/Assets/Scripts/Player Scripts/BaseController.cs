@@ -7,21 +7,14 @@ public class BaseController : MonoBehaviour
     [Header("Movement Parameters")]
     public Vector3 speed;
     public float xSpeed = 7.5f, zSpeed = 15f, accelerated = 25f, decelerated = 5f;
-    public float incrementPeriod = 30f;
-
-    [Header("Movement based Sound Parameters")]
-    public float lowSoundPitch;
-    public float normalSoundPitch; 
-    public float highSoundPitch;
-    public AudioClip engineOnSound; 
-    public AudioClip engineOffSound;
+    public float speedIncrementPeriod = 30f;
 
     [Header("On-screen buttons")]
-    public GameObject buttonShoot;
-    public GameObject buttonDown;
-    public GameObject buttonRight;
-    public GameObject buttonLeft;
-    public GameObject buttonUp;
+    public GameObject shootButton;
+    public GameObject upButton;
+    public GameObject downButton;
+    public GameObject rightButton;
+    public GameObject leftButton;
 
     [Header("Monitoring through editor")]
     public float timePassed;
@@ -30,6 +23,7 @@ public class BaseController : MonoBehaviour
 
     private AudioSource soundManager;
     private bool isSlow;
+    private bool isFast;
 
     private void Awake()
     {
@@ -56,40 +50,16 @@ public class BaseController : MonoBehaviour
 
     protected void MoveNormal()
     {
-        if(isSlow)
-        {
-            isSlow = false;
-
-            soundManager.Stop();
-            soundManager.clip = engineOnSound;
-            soundManager.volume = 0.3f;
-            soundManager.Play();
-        }
         speed = new Vector3(speed.x, 0f, zSpeed);
     }
 
     protected void MoveSlow()
     {
-        if(!isSlow)
-        {
-            isSlow = true;
-
-            soundManager.Stop();
-            soundManager.clip = engineOffSound;
-            soundManager.volume = 0.5f;
-            soundManager.Play();
-        }
-
         speed = new Vector3(speed.x, 0f, decelerated);
     }
 
     protected void MoveFast()
     {
-        soundManager.Stop();
-        soundManager.clip = engineOnSound;
-        soundManager.volume = 0.3f;
-        soundManager.Play();
-
         speed = new Vector3(speed.x, 0f, accelerated);
     }
 }

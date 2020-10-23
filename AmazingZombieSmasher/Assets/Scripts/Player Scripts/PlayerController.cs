@@ -26,30 +26,30 @@ public class PlayerController : BaseController
         //shootSliderAnim = GameObject.Find("Firepower Bar").GetComponent<Animator>();
         shootSliderAnim = GameObject.Find("UI Holder").GetComponentInChildren<Animator>(true);
 
-        buttonShoot = GameObject.Find("Shoot Button");
-        buttonUp = GameObject.Find("Up Button");
-        buttonDown = GameObject.Find("Down Button");
-        buttonRight = GameObject.Find("Right Button");
-        buttonLeft = GameObject.Find("Left Button");
+        shootButton = GameObject.Find("Shoot Button");
+        upButton = GameObject.Find("Up Button");
+        downButton = GameObject.Find("Down Button");
+        rightButton = GameObject.Find("Right Button");
+        leftButton = GameObject.Find("Left Button");
 
         //Shoot Button
-        buttonShoot.GetComponent<HoldToClick>().onLongClickUp.AddListener(ShootingControl);
+        shootButton.GetComponent<HoldToClick>().onLongClickUp.AddListener(ShootingControl);
 
         //On screen Up button
-        buttonUp.gameObject.GetComponent<HoldToClick>().onLongClickDown.AddListener(MoveFast);
-        buttonUp.gameObject.GetComponent<HoldToClick>().onLongClickUp.AddListener(MoveNormal);
+        upButton.gameObject.GetComponent<HoldToClick>().onLongClickDown.AddListener(MoveFast);
+        upButton.gameObject.GetComponent<HoldToClick>().onLongClickUp.AddListener(MoveNormal);
 
         //On screen Down button
-        buttonDown.gameObject.GetComponent<HoldToClick>().onLongClickDown.AddListener(MoveSlow);
-        buttonDown.gameObject.GetComponent<HoldToClick>().onLongClickUp.AddListener(MoveNormal);
+        downButton.gameObject.GetComponent<HoldToClick>().onLongClickDown.AddListener(MoveSlow);
+        downButton.gameObject.GetComponent<HoldToClick>().onLongClickUp.AddListener(MoveNormal);
 
         //On screen Right button
-        buttonRight.gameObject.GetComponent<HoldToClick>().onLongClickDown.AddListener(MoveRight);
-        buttonRight.gameObject.GetComponent<HoldToClick>().onLongClickUp.AddListener(MoveStraight);
+        rightButton.gameObject.GetComponent<HoldToClick>().onLongClickDown.AddListener(MoveRight);
+        rightButton.gameObject.GetComponent<HoldToClick>().onLongClickUp.AddListener(MoveStraight);
 
         //On screen Left button
-        buttonLeft.gameObject.GetComponent<HoldToClick>().onLongClickDown.AddListener(MoveLeft);
-        buttonLeft.gameObject.GetComponent<HoldToClick>().onLongClickUp.AddListener(MoveStraight);
+        leftButton.gameObject.GetComponent<HoldToClick>().onLongClickDown.AddListener(MoveLeft);
+        leftButton.gameObject.GetComponent<HoldToClick>().onLongClickUp.AddListener(MoveStraight);
 
         canShoot = true;
 
@@ -165,7 +165,7 @@ public class PlayerController : BaseController
 
     IEnumerator IncreaseSpeed()
     {
-        yield return new WaitForSeconds(incrementPeriod);
+        yield return new WaitForSeconds(speedIncrementPeriod);
         
         zSpeed += 5;
         accelerated += 5;
