@@ -1,4 +1,4 @@
-# Trial show reel projects
+# Trial and show reel projects
 
 1. Amazing Bomber Man: dodge the explosives falling from the sky.
 
