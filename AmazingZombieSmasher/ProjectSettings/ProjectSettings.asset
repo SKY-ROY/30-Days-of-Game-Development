@@ -4,6 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 20
+<<<<<<< Updated upstream
   productGUID: c5ae49688283e4041b63c02145335aad
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
@@ -13,6 +14,17 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: SKY5698
+=======
+  productGUID: 517685415e1928746aba3bb34e9e79c9
+  AndroidProfiler: 0
+  AndroidFilterTouchesWhenObscured: 0
+  AndroidEnableSustainedPerformanceMode: 0
+  defaultScreenOrientation: 4
+  targetDevice: 2
+  useOnDemandResources: 0
+  accelerometerFrequency: 60
+  companyName: DefaultCompany
+>>>>>>> Stashed changes
   productName: AmazingZombieSmasher
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
@@ -259,6 +271,7 @@ PlayerSettings:
   androidGamepadSupportLevel: 0
   AndroidValidateAppBundleSize: 1
   AndroidAppBundleSizeToValidate: 150
+<<<<<<< Updated upstream
   m_BuildTargetIcons:
   - m_BuildTarget: 
     m_Icons:
@@ -360,6 +373,10 @@ PlayerSettings:
       m_Height: 36
       m_Kind: 0
       m_SubKind: 
+=======
+  m_BuildTargetIcons: []
+  m_BuildTargetPlatformIcons: []
+>>>>>>> Stashed changes
   m_BuildTargetBatching:
   - m_BuildTarget: Standalone
     m_StaticBatching: 1
@@ -410,7 +427,11 @@ PlayerSettings:
     m_GraphicsJobMode: 0
   m_BuildTargetGraphicsAPIs:
   - m_BuildTarget: AndroidPlayer
+<<<<<<< Updated upstream
     m_APIs: 0b000000
+=======
+    m_APIs: 150000000b000000
+>>>>>>> Stashed changes
     m_Automatic: 0
   - m_BuildTarget: iOSSupport
     m_APIs: 10000000
