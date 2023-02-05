@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: InvertedHullOutlines
+  m_Name: InvertedHullOutlinesMat
   m_Shader: {fileID: -6465566751694194690, guid: d8874132bc2874a66bc07cf8ead92eab,
     type: 3}
   m_ValidKeywords: []
@@ -108,7 +108,7 @@ Material:
     - _GlossyReflections: 0
     - _Metallic: 0
     - _OcclusionStrength: 1
-    - _Outline_Thickness: 0.01
+    - _Outline_Thickness: 0.02
     - _Parallax: 0.005
     - _QueueControl: 0
     - _QueueOffset: 0
